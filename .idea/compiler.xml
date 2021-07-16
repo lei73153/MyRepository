@@ -2,12 +2,25 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloud-alibaba-demo" />
+        <module name="shop-order" />
+        <module name="shop-user" />
+        <module name="shop-common" />
+        <module name="shop-product" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="shop-common" options="-parameters" />
+      <module name="shop-order" options="-parameters" />
+      <module name="shop-product" options="-parameters" />
+      <module name="shop-user" options="-parameters" />
+      <module name="springcloud-alibaba-demo" options="" />
+    </option>
   </component>
 </project>
